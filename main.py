@@ -1,9 +1,9 @@
 # This is a sample Python script.
 
-# 原始思路为CSDN博主「Parzival_」的原创文章，链接：https://blog.csdn.net/Parzival_/article/details/122360528
-# 本代码由lijinhai进行优化，主要是升级使用为selenium 4版本的包，且适配了更通用的Chrome浏览器，版本118.0.5993.70（正式版本）（64 位）。
-# 交流讨论邮箱地址：lijinhai0804@whu.edu.cn;https://github.com/lijinhai0804
-# 使用前需要安装selenium 4和 webdriver-manager, openpyxl, xlrd, pandas. pycharm可以直接安装最新版
+# 原始思路和代码于CSDN博主「Parzival_」的原创文章中提出，链接：https://blog.csdn.net/Parzival_/article/details/122360528
+# 本代码由lijinhai0804进行优化，主要是升级使用为selenium 4版本的包，且适配了更通用的Chrome浏览器，版本118.0.5993.70（正式版本）（64 位）。
+# 交流讨论：lijinhai0804@whu.edu.cn;https://github.com/lijinhai0804
+# 使用前需要安装selenium 4和 webdriver-manager, openpyxl, xlrd, pandas. 在pycharm中可以直接安装最新版，非常方便！
 # 转载请附上原文出处链接及上述声明。
 
 from selenium import webdriver
@@ -11,6 +11,7 @@ import os
 from selenium.webdriver.common.by import By
 import time
 
+# 强烈建议用校园网的IP登录，非常方便不用进行login。login函数默认注释掉，有需要的人可以启用。
 # def login(driver):
 #     '''登录wos'''
 #     # 通过CHINA CERNET Federation登录
@@ -80,7 +81,7 @@ def startdownload(url, record_num, SAVE_TO_DIRECTORY, record_format='excel', rev
        SAVE_TO_DIRECTORY -> 记录导出存储路径(文件夹)，在代码末尾设置;\n
        reverse -> 是否设置检索结果降序排列, default=False \n
        ----------------------------------------------------
-       tip1:首次打开wos必须登录,在学校统一身份认证处需要手动输入验证码并点击登录，需要用login函数;IP登录请忽视
+       tip1:首次打开wos必须登录,在学校统一身份认证处需要手动输入验证码并点击登录，需要用login函数;IP登录请忽视，强烈建议校园网IP登录！！！
        tip2:第一次导出时，需要手动在10秒内（下文可修改）设置好定制的内容，后续都会直接点击定制好的导出字段
        tip3:建议以下都用完整XPATH进行元素寻找，绝对不会找不到！！！
     '''
@@ -114,7 +115,7 @@ def startdownload(url, record_num, SAVE_TO_DIRECTORY, record_format='excel', rev
 
     # 获取需要导出的文献数量
     # record_num = int(driver.find_element(By.CSS_SELECTOR, '.brand-blue').text)
-    # 按时间降序排列
+    # 按时间降序排列，本功能默认关闭
     if reverse:
         driver.find_element(By.CSS_SELECTOR,
                             '.top-toolbar wos-select:nth-child(1) button:nth-child(1) span:nth-child(2)').click()
