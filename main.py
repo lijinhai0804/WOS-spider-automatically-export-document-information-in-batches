@@ -1,7 +1,7 @@
 # This is a sample Python script.
 
 # 原始思路为CSDN博主「Parzival_」的原创文章，链接：https://blog.csdn.net/Parzival_/article/details/122360528
-# 本代码由lijinhai进行优化，主要是升级使用为selenium 4版本的包，且适配了更通用的Chrome浏览器(版本118.0.5993.70（正式版本）（64 位）。
+# 本代码由lijinhai进行优化，主要是升级使用为selenium 4版本的包，且适配了更通用的Chrome浏览器，版本118.0.5993.70（正式版本）（64 位）。
 # 交流讨论邮箱地址：lijinhai0804@whu.edu.cn;https://github.com/lijinhai0804
 # 使用前需要安装selenium 4和 webdriver-manager, openpyxl, xlrd, pandas. pycharm可以直接安装最新版
 # 转载请附上原文出处链接及上述声明。
