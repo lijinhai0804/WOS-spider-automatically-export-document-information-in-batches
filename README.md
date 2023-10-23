@@ -7,7 +7,7 @@
 ## 下载及安装操作（Download and Install）
 1. main.py是主文件，必须下载。merge.py用来将导出的不同excel表内容融合到一张表内，按需下载。driver install.py不一定会用得到，如果电脑里是最新的谷歌浏览器，且安装了最新的selenium库，不一定会需要driver install.py安装驱动，但是如果主程序运行报错，可以尝试运行driver install.py。
 2. 我所使用的软件及库版本：python 3.11;selenium 4.14;chrome 118.0.5993.89
-3. 代码中用到的库：selenium（必要）\webdriver_manager\pandas\xlrd\os\glob。Pycharm可以扫描未安装的库然后来安装。
+3. 代码中用到的库：selenium（必要）\webdriver_manager\pandas\glob。Pycharm可以扫描未安装的库然后来安装。
 ## 如何使用（How to use）
 1. 在使用前main.py中代码末尾的主要函数的参数需要进行修改。url是复制已经检索好的WOS网址；record_num设置为下载篇数；download_path是下载文件储存地址（**一定要是空文件夹**）；record_format是下载的文件格式，目前可以填excel、bib；reverse按时间降序排列，默认关闭。
 2. 建议不要在翻墙的时候使用。除非是在国外的大学就读。
